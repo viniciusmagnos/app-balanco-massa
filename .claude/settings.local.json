@@ -1,0 +1,39 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir /a \"V:\\\\Projetos Manta\\\\app-balanco-massa\")",
+      "WebSearch",
+      "Bash(if exist requirements.txt type requirements.txt)",
+      "Bash(npm create:*)",
+      "Bash(npm install:*)",
+      "Bash(npx tsc:*)",
+      "Bash(dir \"V:\\\\Projetos Manta\\\\app-balanco-massa\" /b)",
+      "Bash(python:*)",
+      "Bash(.venv/Scripts/pip install:*)",
+      "Bash(.venv/Scripts/python:*)",
+      "Bash(.venv/Scripts/uvicorn:*)",
+      "Bash(npm run dev:*)",
+      "Bash(start:*)",
+      "Bash(explorer \"http://localhost:5173\")",
+      "Bash(curl:*)",
+      "WebFetch(domain:dashboard-rio-tocantins.vercel.app)",
+      "Bash(ls -la \"V:\\\\Projetos Manta\\\\app-balanco-massa\\\\frontend\"\" 2>/dev/null || ls -la \"V:/Projetos Manta/app-balanco-massa/frontend/ \")",
+      "Bash(npx vite build:*)",
+      "Bash(npx vite:*)",
+      "Bash(\".venv/Scripts/python.exe\" -c \"from app.models.schemas import CalculationResponse, ProfilePoint, SectionProfile; from app.core.segments import build_profile_points; print\\(''All imports OK''\\)\")",
+      "Bash(tasklist:*)",
+      "Bash(tasklist.exe:*)",
+      "Bash(taskkill.exe:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(wmic:*)",
+      "Bash(powershell -Command:*)",
+      "Bash(/c/Windows/System32/WindowsPowerShell/v1.0/powershell.exe:*)",
+      "Bash(.venv/Scripts/python.exe:*)",
+      "Bash(ls -la \"V:\\\\Projetos Manta\\\\app-balanco-massa\\\\frontend\"\" 2>/dev/null || ls -la \"/V/Projetos Manta/app-balanco-massa/frontend/ \")",
+      "Bash(wc:*)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  /* Manta Brand Colors */
+  --color-manta: #E07B3D;
+  --color-manta-hover: #C45A2B;
+  --color-manta-warm: #8B4A2D;
+  --color-manta-dark: #5D3A1A;
+
+  /* Dark Theme */
+  --color-background: #0F1117;
+  --color-foreground: #EDEAE5;
+  --color-surface: #181B23;
+  --color-surface-hover: #1F2330;
+  --color-elevated: #252830;
+  --color-muted: #2D3139;
+  --color-muted-foreground: #8B919A;
+  --color-border: #2A2E37;
+  --color-border-subtle: #22252D;
+
+  /* Semantic */
+  --color-primary: #E07B3D;
+  --color-primary-foreground: #ffffff;
+  --color-destructive: #EF4444;
+  --color-accent: #1F2330;
+  --color-accent-foreground: #EDEAE5;
+  --color-card: #181B23;
+  --color-card-foreground: #EDEAE5;
+  --color-success: #22C55E;
+  --color-warning: #F59E0B;
+  --color-danger: #EF4444;
+
+  /* Radius */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-muted);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted-foreground);
+}
+
+/* Smooth transitions (exclude SVG internals to avoid breaking charts) */
+*:not(svg):not(svg *) {
+  transition-property: background-color, border-color, color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Prevent Tailwind preflight from overriding Recharts SVG colors */
+.recharts-wrapper svg {
+  color: inherit;
+}
+.recharts-wrapper path,
+.recharts-wrapper rect,
+.recharts-wrapper line,
+.recharts-wrapper circle {
+  transition: none;
+}
+
+/* Number input spinner removal for cleaner look */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Focus ring */
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid var(--color-manta);
+  outline-offset: 1px;
+}
+
+select option {
+  background: var(--color-surface);
+  color: var(--color-foreground);
+}
